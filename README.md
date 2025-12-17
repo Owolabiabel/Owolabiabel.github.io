@@ -19,25 +19,5 @@ Details of invited talks, academic presentations, and mentorship-related speakin
 ### CV  
 Access to Paschal’s curriculum vitae, linked directly from the site’s main navigation menu.
 
----
 
-## 🚀 Features
 
-- Built with **Jekyll** and **AcademicPages**
-- Structured support for academic content (publications, talks, CV)
-- Responsive and clean layout
-- Content managed using Markdown files
-- Automatic deployment via GitHub Pages
-
----
-
-## 🛠️ Local Development
-
-To run the website locally:
-
-1. Clone the repository.
-2. Install Jekyll and required dependencies.
-3. Serve the site locally using:
-
-   ```bash
-   bundle exec jekyll serve
