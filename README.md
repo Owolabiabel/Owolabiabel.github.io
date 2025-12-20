@@ -1,4 +1,4 @@
-## 👤 About me
+## About me
 
 Hi, welcome to my page. I am **Abel Owolabi**, a second-year Ph.D. student in the **Department of Electrical and Computer Engineering** at the **University of Rochester, New York, USA** currently advised by *Distinguished Professor Eby G. Friedman.*
 
@@ -6,19 +6,11 @@ My research focuses on the design and optimization of superconducting and beyond
 
 ## Recent News
 
-The website includes the following sections:
+- **June 2024**: Retained as Graduate Teaching Assistant, Augustine University, Ilara-Epe, Lagos, Nigeria
+- **March 2024**: Won the Most Outstanding Corps Member Award, Augustine University, Ilara-Epe, Lagos, Nigeria
 
-### About Me  
-A brief introduction, contact information, and a summary of Paschal’s research interests and recent activities (such as conferences, internships, and awards).
 
-### Publications  
-A curated list of peer-reviewed conference papers, short papers, technical reports, and posters authored or co-authored by Paschal.
 
-### Talks  
-Details of invited talks, academic presentations, and mentorship-related speaking engagements.
-
-### CV  
-Access to Paschal’s curriculum vitae, linked directly from the site’s main navigation menu.
 
 
 
