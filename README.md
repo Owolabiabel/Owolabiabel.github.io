@@ -1,22 +1,43 @@
 <table style="border:none; border-collapse:collapse; width:100%;">
 <tr>
 
-<!-- LEFT COLUMN -->
+<!-- ================= LEFT COLUMN ================= -->
 <td width="210" valign="top" style="border:none; padding-right:24px;">
 
 <img src="profile.jpg" width="190" style="border-radius:8px;"><br><br>
 
-<p align="center" style="font-size:12px; line-height:1.6; margin:0;">
-  <a href="https://www.linkedin.com/in/abelowolabi/" style="text-decoration:none; color:#6b7280;">LinkedIn</a><br>
-  <a href="https://scholar.google.com/citations?user=YOUR_ID" style="text-decoration:none; color:#6b7280;">Google Scholar</a><br>
-  <a href="https://www.researchgate.net/profile/YOUR_NAME" style="text-decoration:none; color:#6b7280;">ResearchGate</a><br>
-  <a href="https://orcid.org/YOUR_ORCID" style="text-decoration:none; color:#6b7280;">ORCID</a><br>
-  <a href="https://x.com/YOUR_HANDLE" style="text-decoration:none; color:#6b7280;">X</a>
+<p style="font-size:12px; line-height:1.9; margin:0; text-align:left;">
+
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
+       width="14" style="vertical-align:middle; opacity:0.6;">
+  <a href="https://www.linkedin.com/in/abelowolabi/"
+     style="text-decoration:none; color:#6b7280; margin-left:6px;">LinkedIn</a><br>
+
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google-scholar.svg"
+       width="14" style="vertical-align:middle; opacity:0.6;">
+  <a href="https://scholar.google.com/citations?user=YOUR_ID"
+     style="text-decoration:none; color:#6b7280; margin-left:6px;">Google Scholar</a><br>
+
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/researchgate.svg"
+       width="14" style="vertical-align:middle; opacity:0.6;">
+  <a href="https://www.researchgate.net/profile/YOUR_NAME"
+     style="text-decoration:none; color:#6b7280; margin-left:6px;">ResearchGate</a><br>
+
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/orcid.svg"
+       width="14" style="vertical-align:middle; opacity:0.6;">
+  <a href="https://orcid.org/YOUR_ORCID"
+     style="text-decoration:none; color:#6b7280; margin-left:6px;">ORCID</a><br>
+
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg"
+       width="14" style="vertical-align:middle; opacity:0.6;">
+  <a href="https://x.com/YOUR_HANDLE"
+     style="text-decoration:none; color:#6b7280; margin-left:6px;">X</a>
+
 </p>
 
 </td>
 
-<!-- RIGHT COLUMN -->
+<!-- ================= RIGHT COLUMN ================= -->
 <td valign="top" style="border:none; padding:0;">
 
 <p align="center" style="font-size:13px; margin-top:0;">
@@ -43,8 +64,8 @@ Hi, welcome to my page. I am <b>Abel Owolabi</b>, a second-year Ph.D. student in
 </p>
 
 <p>
-My research focuses on the design and optimization of superconducting and
-beyond-CMOS digital circuits, with particular emphasis on
+My research focuses on the design and optimization of superconducting and beyond-CMOS
+digital circuits, with particular emphasis on
 <b>Dynamic Single Flux Quantum (DSFQ)</b> and
 <b>Rapid Single Flux Quantum (RSFQ)</b> logic.
 It investigates clock-free, data-driven architectures, bias-margin optimization,
