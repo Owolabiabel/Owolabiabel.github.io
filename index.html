@@ -11,7 +11,7 @@
     content="Abel Owolabi — VLSI and digital IC design for emerging technologies."
   >
 
-  <!-- Social media and academic profile icons -->
+  <!-- Social and academic profile icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -74,9 +74,11 @@
       white-space: nowrap;
     }
 
-    .navigation .site-name {
+    .navigation .home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       margin-right: 34px;
-      font-size: 26px;
       line-height: 1;
     }
 
@@ -97,6 +99,8 @@
 
     /* Profile sidebar */
     .sidebar {
+      width: 175px;
+      max-width: 100%;
       min-width: 0;
       align-self: start;
     }
@@ -105,6 +109,7 @@
       display: block;
       width: 175px;
       height: 175px;
+      max-width: 100%;
       padding: 5px;
       border: 1px solid #f2f3f3;
       border-radius: 50%;
@@ -119,25 +124,35 @@
     }
 
     .author-bio {
-      margin: 10px 0 20px;
-      font-size: 13.5px;
-      line-height: 1.5;
+      margin: 10px 0 16px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .student-title {
+      font-size: 11.5px;
+      font-weight: 400;
+      white-space: nowrap;
     }
 
     .profile-links {
+      width: 100%;
       padding: 0;
       margin: 0;
       list-style: none;
-      font-size: 13.5px;
+      font-size: 13px;
     }
 
     .profile-links li {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
       margin: 0;
       padding: 5px 0;
     }
 
     .profile-links a {
-      display: block;
       color: #494e52;
       text-decoration: none;
     }
@@ -146,10 +161,14 @@
       text-decoration: underline;
     }
 
+    .profile-links .location {
+      font-size: 11.5px;
+    }
+
     .icon {
       display: inline-block;
-      width: 19px;
-      margin-right: 3px;
+      flex: 0 0 17px;
+      width: 17px;
       text-align: center;
       font-size: 14px;
     }
@@ -181,21 +200,6 @@
 
     .orcid-icon {
       color: #a6ce39;
-    }
-
-    .handle {
-      display: block;
-      margin-left: 25px;
-      color: #7a8288;
-      font-size: 11px;
-      line-height: 1.5;
-      overflow-wrap: anywhere;
-    }
-
-    .social-start {
-      margin-top: 9px !important;
-      padding-top: 12px !important;
-      border-top: 1px solid #f2f3f3;
     }
 
     /* Page content */
@@ -313,9 +317,8 @@
         font-size: 14px;
       }
 
-      .navigation .site-name {
+      .navigation .home-link {
         margin-right: 0;
-        font-size: 24px;
       }
 
       .layout {
@@ -325,16 +328,13 @@
       }
 
       .sidebar {
+        width: 175px;
         margin-bottom: 35px;
       }
 
       .portrait {
-        width: 150px;
-        height: 150px;
-      }
-
-      .profile-links {
-        max-width: 310px;
+        width: 175px;
+        height: 175px;
       }
 
       h1 {
@@ -354,17 +354,34 @@
   <!-- TOP NAVIGATION -->
   <header class="masthead">
     <nav class="navigation" aria-label="Main navigation">
+
       <a
-        class="site-name"
+        class="home-link"
         href="#about"
         aria-label="Home"
         title="Home"
-      >🏠</a>
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M3 10.5 12 3l9 7.5"></path>
+          <path d="M5 9v12h5v-7h4v7h5V9"></path>
+        </svg>
+      </a>
 
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks</a>
       <a href="Abel_Owolabi_Resume.pdf">CV</a>
+
     </nav>
   </header>
 
@@ -382,95 +399,82 @@
       <h2 class="author-name">Abel Owolabi</h2>
 
       <p class="author-bio">
-        <strong>PhD Student, URochester ECE</strong><br>
+        <span class="student-title">PhD Student, URochester ECE</span><br>
         VLSI &amp; Digital IC Design<br>
         Emerging Technologies
       </p>
 
       <ul class="profile-links">
 
-        <li>
+        <li class="location">
           <i
             class="fa-solid fa-location-dot icon location-icon"
             aria-hidden="true"
           ></i>
-          Rochester, New York, USA
-        </li>
-
-        <li class="social-start">
-          <a href="mailto:aowolabi@ur.rochester.edu">
-            <i
-              class="fa-solid fa-envelope icon email-icon"
-              aria-hidden="true"
-            ></i>
-            Email
-            <span class="handle">aowolabi@ur.rochester.edu</span>
-          </a>
+          <span>Rochester, New York, USA</span>
         </li>
 
         <li>
+          <i
+            class="fa-solid fa-envelope icon email-icon"
+            aria-hidden="true"
+          ></i>
+          <a href="mailto:aowolabi@ur.rochester.edu">Email</a>
+        </li>
+
+        <li>
+          <i
+            class="fa-brands fa-linkedin icon linkedin-icon"
+            aria-hidden="true"
+          ></i>
           <a href="https://www.linkedin.com/in/abelowolabi/">
-            <i
-              class="fa-brands fa-linkedin icon linkedin-icon"
-              aria-hidden="true"
-            ></i>
             LinkedIn
-            <span class="handle">abelowolabi</span>
           </a>
         </li>
 
         <li>
-          <a href="https://github.com/Owolabiabel">
-            <i
-              class="fa-brands fa-github icon github-icon"
-              aria-hidden="true"
-            ></i>
-            GitHub
-            <span class="handle">@Owolabiabel</span>
-          </a>
+          <i
+            class="fa-brands fa-github icon github-icon"
+            aria-hidden="true"
+          ></i>
+          <a href="https://github.com/Owolabiabel">GitHub</a>
         </li>
 
         <li>
-          <a href="https://x.com/Owolabiabel">
-            <i
-              class="fa-brands fa-x-twitter icon x-icon"
-              aria-hidden="true"
-            ></i>
-            X
-            <span class="handle">@Owolabiabel</span>
-          </a>
+          <i
+            class="fa-brands fa-x-twitter icon x-icon"
+            aria-hidden="true"
+          ></i>
+          <a href="https://x.com/Owolabiabel">X</a>
         </li>
 
         <li>
+          <i
+            class="fa-brands fa-google-scholar icon scholar-icon"
+            aria-hidden="true"
+          ></i>
           <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&amp;hl=en">
-            <i
-              class="fa-brands fa-google-scholar icon scholar-icon"
-              aria-hidden="true"
-            ></i>
             Google Scholar
-            <span class="handle">Abel Owolabi</span>
           </a>
         </li>
 
         <li>
+          <i
+            class="fa-brands fa-researchgate icon researchgate-icon"
+            aria-hidden="true"
+          ></i>
           <a href="https://www.researchgate.net/profile/Abel-Owolabi-2">
-            <i
-              class="fa-brands fa-researchgate icon researchgate-icon"
-              aria-hidden="true"
-            ></i>
             ResearchGate
-            <span class="handle">Abel-Owolabi-2</span>
           </a>
         </li>
 
         <li>
+          <i
+            class="fa-brands fa-orcid icon orcid-icon"
+            aria-hidden="true"
+          ></i>
           <a href="https://orcid.org/0009-0003-4792-8789">
-            <i
-              class="fa-brands fa-orcid icon orcid-icon"
-              aria-hidden="true"
-            ></i>
             ORCID
-            <span class="handle">0009-0003-4792-8789</span>
           </a>
         </li>
 
