@@ -1,174 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Abel Owolabi</title>
+
+  <meta
+    name="description"
+    content="Abel Owolabi — VLSI and digital IC design for emerging technologies."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: #494e52;
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #52adc8;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #34798c;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #52adc8;
+      outline-offset: 4px;
+    }
+
+    /* Top navigation */
+    .masthead {
+      border-bottom: 1px solid #f2f3f3;
+    }
+
+    .navigation {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0 36px;
+      min-height: 81px;
+    }
+
+    .navigation a {
+      display: inline-block;
+      padding: 9px 0;
+      color: #7a8288;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .navigation .site-name {
+      margin-right: 34px;
+      font-weight: 700;
+    }
+
+    .navigation a:hover {
+      color: #494e52;
+    }
+
+    /* Main layout */
+    .layout {
+      max-width: 1280px;
+      margin: 36px auto 0;
+      padding: 0 18px 54px;
+      display: grid;
+      grid-template-columns: 190px minmax(0, 770px);
+      column-gap: 73px;
+      min-height: calc(100vh - 275px);
+    }
+
+    /* Profile sidebar */
+    .sidebar {
+      min-width: 0;
+      align-self: start;
+    }
+
+    .portrait {
+      display: block;
+      width: 175px;
+      height: 175px;
+      padding: 5px;
+      border: 1px solid #f2f3f3;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .author-name {
+      margin: 10px 0 0;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .author-bio {
+      margin: 10px 0 20px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .profile-links {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-size: 13.5px;
+    }
+
+    .profile-links li {
+      margin: 0;
+      padding: 4px 0;
+    }
+
+    .profile-links a {
+      display: block;
+      color: #494e52;
+      text-decoration: none;
+    }
+
+    .profile-links a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 19px;
+      margin-right: 3px;
+      text-align: center;
+      color: #494e52;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .handle {
+      display: block;
+      margin-left: 25px;
+      color: #7a8288;
+      font-size: 11px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .social-start {
+      margin-top: 9px !important;
+      padding-top: 12px !important;
+      border-top: 1px solid #f2f3f3;
+    }
+
+    /* Page content */
+    main {
+      min-width: 0;
+    }
+
+    .page[hidden] {
+      display: none;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    main h2 {
+      margin: 45px 0 11px;
+      padding-bottom: 11px;
+      border-bottom: 1px solid #f2f3f3;
+      font-size: 22.5px;
+      line-height: 1.2;
+    }
+
+    main h3 {
+      margin: 28px 0 12px;
+      font-size: 20px;
+    }
+
+    main p {
+      margin: 0 0 23px;
+    }
+
+    main ul,
+    main ol {
+      margin: 0 0 23px;
+      padding-left: 40px;
+    }
+
+    main li {
+      margin-bottom: 9px;
+    }
+
+    .date {
+      color: #7a8288;
+      font-size: 15px;
+    }
+
+    .download {
+      display: inline-block;
+      padding: 10px 16px;
+      color: #fff;
+      background: #7a8288;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .download:hover {
+      color: #fff;
+      background: #494e52;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 30px 18px;
+      border-top: 1px solid #bdc1c4;
+      background: #f2f3f3;
+      color: #7a8288;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      max-width: 1244px;
+      margin: 0 auto;
+    }
+
+    .footer p {
+      margin: 8px 0;
+    }
+
+    .footer a {
+      color: #7a8288;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .follow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 190px minmax(0, 1fr);
+        column-gap: 40px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+
+      .navigation {
+        padding: 12px 20px;
+        gap: 0 22px;
+        font-size: 14px;
+      }
+
+      .navigation .site-name {
+        width: 100%;
+        margin-right: 0;
+        font-size: 18px;
+      }
+
+      .layout {
+        display: block;
+        margin-top: 25px;
+        padding: 0 20px 40px;
+      }
+
+      .sidebar {
+        margin-bottom: 35px;
+      }
+
+      .portrait {
+        width: 150px;
+        height: 150px;
+      }
+
+      .profile-links {
+        max-width: 310px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      main h2 {
+        margin-top: 32px;
+        font-size: 21px;
+      }
+    }
+  </style>
 </head>
 
-<body style="
-  margin:0;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI',
-               Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color:#111827;
-">
+<body>
 
-  <!-- Page width -->
-  <div style="max-width:1280px; margin:0 auto; padding:26px 24px;">
+  <!-- TOP NAVIGATION -->
+  <header class="masthead">
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="site-name" href="#about">Abel Owolabi</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="Abel_Owolabi_Resume.pdf">CV</a>
+    </nav>
+  </header>
 
-    <table style="border:none; border-collapse:collapse; width:100%;">
-      <tr>
+  <div class="layout">
 
-        <!-- ================= LEFT COLUMN ================= -->
-        <td width="220" valign="top" style="border:none; padding-right:36px;">
+    <!-- PROFILE SIDEBAR -->
+    <aside class="sidebar">
 
-          <img src="abelowolabi.jpg" width="200" alt="Abel Owolabi"
-               style="border-radius:8px; display:block;" />
+      <img
+        class="portrait"
+        src="abelowolabi.jpg"
+        alt="Abel Owolabi"
+      >
 
-          <p style="margin:8px 0 0 0; font-size:18px; font-weight:bold; color:#6b7280; text-align:center;">
-            Abel Owolabi
-          </p>
+      <h2 class="author-name">Abel Owolabi</h2>
 
-          <p style="margin:2px 0 0 0; font-size:13px; color:#6b7280; text-align:center;">
-            PhD Student, URochester ECE
-          </p>
+      <p class="author-bio">
+        PhD Student, URochester ECE<br>
+        VLSI &amp; Digital IC Design<br>
+        Emerging Technologies
+      </p>
 
-          <div style="height:12px;"></div>
+      <ul class="profile-links">
 
-          <!-- Academic links -->
-          <p style="margin:0; font-size:13px; line-height:2.0;">
+        <li>
+          <span class="icon" aria-hidden="true">⌖</span>
+          Rochester, New York, USA
+        </li>
 
-          <span style="color:#6b7280;">
-            <svg width="14" height="14" viewBox="0 0 24 24"
-                 style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/>
-            </svg>
-            Rochester, New York, USA
-          </span><br />
+        <li>
+          <a href="#publications">
+            <span class="icon" aria-hidden="true">▤</span>
+            Publications
+          </a>
+        </li>
 
-            <a href="mailto:aowolabi@ur.rochester.edu"
-               style="color:#6b7280; text-decoration:none;">
-              <svg width="14" height="14" viewBox="0 0 24 24"
-                   style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>Email
-            </a><br />
+        <li>
+          <a href="Abel_Owolabi_Resume.pdf">
+            <span class="icon" aria-hidden="true">▧</span>
+            Résumé (PDF)
+          </a>
+        </li>
 
-            <a href="https://www.linkedin.com/in/abelowolabi/"
-               style="color:#6b7280; text-decoration:none;">
-              <svg width="14" height="14" viewBox="0 0 24 24"
-                   style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.99H4.8V24H.22zM8.58 8.99h4.39v2.05h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 6.99V24h-4.58v-6.46c0-1.54-.03-3.53-2.15-3.53-2.15 0-2.48 1.68-2.48 3.42V24H8.58z"/>
-              </svg>LinkedIn
-            </a><br />
+        <li>
+          <a href="#talks">
+            <span class="icon" aria-hidden="true">◉</span>
+            Talks
+          </a>
+        </li>
 
-            <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&hl=en"
-               style="color:#6b7280; text-decoration:none;">
-              <svg width="14" height="14" viewBox="0 0 24 24"
-                   style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-                <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"/>
-                <path d="M11 12.98L3 9.27V14c0 2.76 3.58 5 8 5s8-2.24 8-5V9.27l-8 3.71z"/>
-              </svg>Google Scholar
-            </a><br />
+        <li class="social-start">
+          <a href="mailto:aowolabi@ur.rochester.edu">
+            <span class="icon" aria-hidden="true">✉</span>
+            Email
+            <span class="handle">aowolabi@ur.rochester.edu</span>
+          </a>
+        </li>
 
-            <a href="https://www.researchgate.net/profile/Abel-Owolabi-2?ev=hdr_xprf"
-               style="color:#6b7280; text-decoration:none;">
-              <svg width="14" height="14" viewBox="0 0 24 24"
-                   style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-                <path d="M19.586 0H4.414A4.414 4.414 0 000 4.414v15.172A4.414 4.414 0 004.414 24h15.172A4.414 4.414 0 0024 19.586V4.414A4.414 4.414 0 0019.586 0zM9.09 18.545H6.273V9.455H9.09v9.09zm-1.41-10.21a1.64 1.64 0 110-3.281 1.64 1.64 0 010 3.281zM18.545 18.545h-2.818v-4.41c0-1.05-.021-2.4-1.463-2.4-1.463 0-1.687 1.14-1.687 2.317v4.493h-2.818V9.455h2.705v1.24h.037c.377-.712 1.297-1.463 2.668-1.463 2.853 0 3.376 1.879 3.376 4.326v4.987z"/>
-              </svg>ResearchGate
-            </a><br />
+        <li>
+          <a href="https://www.linkedin.com/in/abelowolabi/">
+            <span class="icon" aria-hidden="true">in</span>
+            LinkedIn
+            <span class="handle">abelowolabi</span>
+          </a>
+        </li>
 
-            <a href="https://orcid.org/0009-0003-4792-8789"
-               style="color:#6b7280; text-decoration:none;">
-              <svg width="14" height="14" viewBox="0 0 24 24"
-                   style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-                <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm-2.1 17.9H7.6V6.1h2.3v11.8zm-1.15-13.3a1.35 1.35 0 110-2.7 1.35 1.35 0 010 2.7zM17.5 12c0 3.3-2 5.9-6 5.9h-1.8V6.1h1.8c4 0 6 2.6 6 5.9z"/>
-              </svg>ORCID iD
-            </a><br />
+        <li>
+          <a href="https://github.com/Owolabiabel">
+            <span class="icon" aria-hidden="true">GH</span>
+            GitHub
+            <span class="handle">@Owolabiabel</span>
+          </a>
+        </li>
 
-            <a href="https://x.com/Owolabiabel"
-               style="color:#6b7280; text-decoration:none;">
-              <svg width="14" height="14" viewBox="0 0 24 24"
-                   style="vertical-align:-2px; margin-right:6px;" fill="#6b7280">
-                <path d="M18.244 2H21.77l-7.61 8.69L23 22h-6.8l-5.33-6.54L5.21 22H1.68l8.14-9.3L1 2h6.98l4.82 5.96L18.24 2z"/>
-              </svg>X
-            </a>
+        <li>
+          <a href="https://x.com/Owolabiabel">
+            <span class="icon" aria-hidden="true">X</span>
+            X / Twitter
+            <span class="handle">@Owolabiabel</span>
+          </a>
+        </li>
 
-          </p>
+        <li>
+          <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&amp;hl=en">
+            <span class="icon" aria-hidden="true">◆</span>
+            Google Scholar
+            <span class="handle">Abel Owolabi</span>
+          </a>
+        </li>
 
-        </td>
+        <li>
+          <a href="https://www.researchgate.net/profile/Abel-Owolabi-2">
+            <span class="icon" aria-hidden="true">RG</span>
+            ResearchGate
+            <span class="handle">Abel-Owolabi-2</span>
+          </a>
+        </li>
 
-        <!-- ================= RIGHT COLUMN ================= -->
-        <td valign="top" style="border:none; padding:0;">
+        <li>
+          <a href="https://orcid.org/0009-0003-4792-8789">
+            <span class="icon" aria-hidden="true">iD</span>
+            ORCID
+            <span class="handle">0009-0003-4792-8789</span>
+          </a>
+        </li>
 
-          <div style="max-width:900px;">
+      </ul>
+    </aside>
 
-            <!-- Navigation -->
-            <p style="margin:0 0 12px 0; text-align:center; font-size:14px;">
-              <b>
-                <a href="#about-me" style="color:#6b7280; text-decoration:none;">Research</a>
-                &nbsp;&nbsp;•&nbsp;&nbsp;
-                <a href="#publications" style="color:#6b7280; text-decoration:none;">Publications</a>
-                &nbsp;&nbsp;•&nbsp;&nbsp;
-                <a href="#talks" style="color:#6b7280; text-decoration:none;">Talks</a>
-                &nbsp;&nbsp;•&nbsp;&nbsp;
-                <a href="ABEL_OWOLABI_RESUME.pdf" style="color:#6b7280; text-decoration:none;">CV/Resume</a>
-              </b>
-            </p>
+    <!-- MAIN CONTENT -->
+    <main id="main">
 
-            <hr style="border:none; border-top:1px solid #d1d5db; margin:12px 0 20px 0;" />
+      <!-- ABOUT -->
+      <section class="page" id="about">
+        <h1>About me</h1>
 
-            <!-- About -->
-            <h2 id="about-me" style="margin:0 0 12px 0;">About Me</h2>
+        <p>
+          Hi, I’m Abel.<br>
+          I am a Ph.D. student in the Department of Electrical and
+          Computer Engineering at the University of Rochester,
+          New York, USA, advised by
+          <a href="https://hajim.rochester.edu/ece/sites/friedman/">
+            Distinguished Professor Eby G. Friedman
+          </a>.
+        </p>
 
-            <p style="margin:0 0 14px 0; line-height:1.7;">
-              Hi, welcome to my page. I am <b>Abel Owolabi</b>, a second-year Ph.D. student in the
-              <b>Department of Electrical and Computer Engineering</b> at the
-              <b>University of Rochester, New York, USA</b>, currently advised by
-              <i>
-                <a href="https://hajim.rochester.edu/ece/sites/friedman/"
-                   style="color:#6b7280; text-decoration:none;">
-                  Distinguished Professor Eby G. Friedman
-                </a>
-              </i>.
-            </p>
+        <p>
+          My research focuses on
+          <strong>
+            VLSI and digital integrated circuit design for
+            emerging technologies
+          </strong>,
+          with an emphasis on energy-efficient computing and
+          AI/ML accelerator arithmetic.
+        </p>
 
-            <p style="margin:0 0 22px 0; line-height:1.7;">
-        
-              My research focuses on the design and optimization of superconducting digital circuits and architectures, 
-              with particular emphasis on <b>Dynamic Single Flux Quantum (DSFQ)</b> and <b>Rapid Single Flux Quantum (RSFQ)</b> logic. 
-              By leveraging clock-free, data-driven architectures, bias-margin optimization, and Josephson-junction-level circuit techniques, 
-              I develop energy-efficient and scalable solutions for next-generation high-performance cryogenic computing systems.
-            </p>
+        <p>
+          My current work explores superconducting digital circuits,
+          including asynchronous logic and unary arithmetic.
+          I design and optimize circuits from schematic development
+          and simulation through custom physical layout, physical
+          verification, parasitic extraction, and post-layout
+          characterization.
+        </p>
 
-            <!-- News -->
-            <h2 style="margin:0 0 12px 0;">Recent News</h2>
+        <h2>Recent News</h2>
 
-            <ul style="margin:0 0 22px 0; padding-left:20px; line-height:1.8;">
-              <li><b>May 2026</b>: 🎓 Earned a Master of Science (MSc) in Electrical Engineering </li>
-              <li><b>Dec 2025</b>: 🏅 Passed my Ph.D. Comprehensive Examination - a major academic milestone! </li>
-              <li><b>Aug 2024</b>: ✨ Commenced my Ph.D. program in Electrical Engineering at the University of Rochester, New York, USA </li>
-              <li><b>June 2023</b>: 👨‍🏫 Retained as a Graduate Teaching Assistant at Augustine University, Ilara-Epe, Lagos, Nigeria</li>
-              <li><b>May 2023</b>: 🏅 Received the Most Outstanding Corps Member Award at Augustine University, Ilara-Epe, Lagos, Nigeria</li>
-              <li><b>April 2022</b>: 🏅 Earned a B.Tech. in Computer Engineering, achieving First-Class GPA standings across all 10 semesters </li>
-            </ul>
+        <ul>
+          <li>
+            <strong>Sept. 2026:</strong>
+            Presented “A Clock-Free Dynamic Single-Flux-Quantum
+            Half-Adder Design” as an oral presentation at the
+            Applied Superconductivity Conference (ASC 2026).
+            <a href="#talks">Presentation details</a>.
+          </li>
 
-            <!-- Education -->
-            <h2 style="margin:0 0 12px 0;"><b>Education</b></h2>
+          <li>
+            <strong>July 2026:</strong>
+            Submitted my asynchronous DSFQ half-adder test chip
+            to MIT Lincoln Laboratory for fabrication.
+          </li>
 
-            <ul style="margin:0; padding-left:20px; line-height:1.8;">
-              <li><i>Aug. 2024 - Present</i>: Ph.D., Electrical Engineering, University of Rochester, New York, USA</li>
-              <li><i>Aug. 2024 – May 2026</i>: M.Sc., Electrical Engineering, University of Rochester, New York, USA</li>
-              <li><i>Nov. 2015 – April 2022</i>: B.Tech., Computer Engineering, Ladoke Akintola University of Technology, Ogbomoso, Nigeria</li>
-            </ul>
+          <li>
+            <strong>May 2026:</strong>
+            Earned a Master of Science in Electrical Engineering
+            at the University of Rochester.
+          </li>
 
-          </div>
-        </td>
+          <li>
+            <strong>Dec. 2025:</strong>
+            Passed my Ph.D. comprehensive examination.
+          </li>
 
-      </tr>
-    </table>
+          <li>
+            <strong>Aug. 2024:</strong>
+            Began my Ph.D. in Electrical Engineering at the
+            University of Rochester.
+          </li>
 
+          <li>
+            <strong>June 2023:</strong>
+            Retained as a Graduate Teaching Assistant at
+            Augustine University, Ilara-Epe, Lagos, Nigeria.
+          </li>
+
+          <li>
+            <strong>May 2023:</strong>
+            Received the Most Outstanding Corps Member Award
+            at Augustine University.
+          </li>
+
+          <li>
+            <strong>April 2022:</strong>
+            Earned a B.Tech. in Computer Engineering, achieving
+            First-Class GPA standings across all 10 semesters.
+          </li>
+        </ul>
+
+        <h2>Education</h2>
+
+        <ul>
+          <li>
+            <strong>Ph.D., Electrical Engineering</strong><br>
+            University of Rochester, New York, USA<br>
+            <span class="date">Aug. 2024 – Present</span>
+          </li>
+
+          <li>
+            <strong>M.Sc., Electrical Engineering</strong><br>
+            University of Rochester, New York, USA<br>
+            <span class="date">Aug. 2024 – May 2026</span>
+          </li>
+
+          <li>
+            <strong>B.Tech., Computer Engineering</strong><br>
+            Ladoke Akintola University of Technology,
+            Ogbomoso, Nigeria
+          </li>
+        </ul>
+      </section>
+
+      <!-- RESEARCH -->
+      <section class="page" id="research" hidden>
+        <h1>Research</h1>
+
+        <h2>Introduction</h2>
+
+        <p>
+          My research focuses on VLSI and digital integrated
+          circuit design for emerging technologies. I investigate
+          circuit approaches to energy-efficient computing and
+          AI/ML accelerator arithmetic, with current projects
+          in superconducting logic.
+        </p>
+
+        <p>
+          My work spans schematic design, functional simulation,
+          custom physical layout, physical verification,
+          parasitic extraction, and post-layout characterization.
+          I evaluate timing, power dissipation, device count,
+          and operating margins to guide circuit optimization.
+        </p>
+
+        <h2>Asynchronous Digital Logic</h2>
+
+        <p>
+          I develop dynamic single flux quantum (DSFQ) circuits
+          that use self-resetting loops to perform logic operations
+          without a distributed clock.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Asynchronous XOR and half-adder circuits:</strong>
+            Circuit design, transient simulation, timing
+            characterization, and operating-margin optimization.
+          </li>
+
+          <li>
+            <strong>Half-adder test chip:</strong>
+            Custom physical layout in KLayout, on-chip test
+            structures, DRC/LVS verification, InductEx parasitic
+            extraction, and post-layout verification.
+            Submitted to MIT Lincoln Laboratory for fabrication.
+          </li>
+        </ul>
+
+        <h2>Arithmetic Circuits for AI/ML Accelerators</h2>
+
+        <p>
+          I investigate bipolar unary SFQ multiplication for
+          accelerator arithmetic, including pulse encoding,
+          circuit behavior, and multiplication accuracy.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Bipolar unary multiplier:</strong>
+            Developed a circuit with 22 Josephson junctions,
+            an 18.5% reduction relative to the 27-junction
+            reference design.
+          </li>
+
+          <li>
+            <strong>Physical design and characterization:</strong>
+            Multiplier layout using the AIST QuFab PHSTP PDK,
+            with parameter-margin, timing, and power analysis.
+          </li>
+        </ul>
+
+        <h2>VLSI Design and Physical Verification</h2>
+
+        <p>
+          My work combines circuit simulation, parameter sweeps,
+          custom IC layout, physical verification, parasitic
+          extraction, and post-layout simulation. Tools include
+          Cadence Virtuoso, KLayout, InductEx, JSIM, WRSpice,
+          Python, and MATLAB.
+        </p>
+
+        <p>
+          <a href="https://github.com/Owolabiabel/Digital-IC-VLSI-Physical-Layout">
+            View my IC design and physical layout portfolio
+          </a>.
+        </p>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section class="page" id="publications" hidden>
+        <h1>Publications</h1>
+
+        <p>
+          My research manuscripts and presentations are listed
+          below. See also
+          <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&amp;hl=en">
+            Google Scholar
+          </a>.
+        </p>
+
+        <h2>Submitted Manuscripts</h2>
+
+        <ol>
+          <li>
+            <strong>Dynamic Single Flux Quantum Half Adder.</strong><br>
+            <strong>A. Owolabi</strong> and E. G. Friedman.<br>
+            Manuscript submitted to
+            <em>IEEE Transactions on Applied Superconductivity</em>,
+            2026.
+          </li>
+        </ol>
+
+        <h2>Conference Presentations</h2>
+
+        <ol>
+          <li>
+            <strong>
+              A Clock-Free Dynamic Single-Flux-Quantum
+              Half-Adder Design.
+            </strong><br>
+            <strong>A. Owolabi</strong> and E. G. Friedman.<br>
+            Oral presentation,
+            <em>Applied Superconductivity Conference (ASC)</em>,
+            2026.
+            <a href="#talks">Presentation details</a>.
+          </li>
+        </ol>
+      </section>
+
+      <!-- TALKS -->
+      <section class="page" id="talks" hidden>
+        <h1>Talks</h1>
+
+        <h2>Research</h2>
+
+        <ol>
+          <li>
+            <strong>
+              A Clock-Free Dynamic Single-Flux-Quantum
+              Half-Adder Design.
+            </strong><br>
+            Applied Superconductivity Conference (ASC 2026).<br>
+            September 6–11, 2026.<br>
+            <strong>Abel Owolabi</strong> and Eby G. Friedman.
+          </li>
+        </ol>
+
+        <p>
+          Oral presentation on clock-free DSFQ logic, including
+          self-resetting loops, XOR and half-adder circuit
+          operation, timing and operating margins, physical
+          layout, and full-adder cascading.
+        </p>
+      </section>
+
+      <!-- RESUME -->
+      <section class="page" id="resume" hidden>
+        <h1>Résumé</h1>
+
+        <p>
+          Ph.D. student in Electrical Engineering at the
+          University of Rochester, focused on VLSI and digital
+          IC design for emerging technologies.
+        </p>
+
+        <p>
+          Experience spans circuit design and optimization,
+          custom physical layout, physical verification,
+          parasitic extraction, and post-layout simulation.
+        </p>
+
+        <a class="download" href="Abel_Owolabi_Resume.pdf">
+          View résumé (PDF)
+        </a>
+      </section>
+
+      <!-- SITEMAP -->
+      <section class="page" id="sitemap" hidden>
+        <h1>Sitemap</h1>
+
+        <ul>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#resume">Résumé</a></li>
+        </ul>
+      </section>
+
+    </main>
   </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <a href="#sitemap">Sitemap</a>
+
+      <p class="follow">
+        Follow:
+        &nbsp;
+        <a href="https://github.com/Owolabiabel">GitHub</a>
+        &nbsp;
+        <a href="https://x.com/Owolabiabel">X / Twitter</a>
+      </p>
+
+      <p>
+        © <span id="year">2026</span> Abel Owolabi.
+      </p>
+
+    </div>
+  </footer>
+
+  <script>
+    const pageNames = {
+      about: "About me",
+      research: "Research",
+      publications: "Publications",
+      talks: "Talks",
+      resume: "Résumé",
+      sitemap: "Sitemap"
+    };
+
+    function showPage() {
+      const requestedPage = window.location.hash.slice(1);
+      const activePage = Object.prototype.hasOwnProperty.call(
+        pageNames,
+        requestedPage
+      ) ? requestedPage : "about";
+
+      document.querySelectorAll(".page").forEach(function (page) {
+        page.hidden = page.id !== activePage;
+      });
+
+      document.title = pageNames[activePage] + " - Abel Owolabi";
+
+      document.querySelectorAll(".navigation a").forEach(function (link) {
+        if (link.getAttribute("href") === "#" + activePage) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    window.addEventListener("hashchange", function () {
+      showPage();
+      window.scrollTo(0, 0);
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    showPage();
+  </script>
+
 </body>
 </html>
