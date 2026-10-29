@@ -11,6 +11,12 @@
     content="Abel Owolabi — VLSI and digital IC design for emerging technologies."
   >
 
+  <!-- Social media and academic profile icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
   <style>
     * {
       box-sizing: border-box;
@@ -70,7 +76,8 @@
 
     .navigation .site-name {
       margin-right: 34px;
-      font-weight: 700;
+      font-size: 26px;
+      line-height: 1;
     }
 
     .navigation a:hover {
@@ -126,7 +133,7 @@
 
     .profile-links li {
       margin: 0;
-      padding: 4px 0;
+      padding: 5px 0;
     }
 
     .profile-links a {
@@ -144,9 +151,36 @@
       width: 19px;
       margin-right: 3px;
       text-align: center;
+      font-size: 14px;
+    }
+
+    .location-icon,
+    .email-icon {
       color: #494e52;
-      font-size: 12px;
-      font-weight: 600;
+    }
+
+    .linkedin-icon {
+      color: #0a66c2;
+    }
+
+    .github-icon {
+      color: #181717;
+    }
+
+    .x-icon {
+      color: #000;
+    }
+
+    .scholar-icon {
+      color: #4285f4;
+    }
+
+    .researchgate-icon {
+      color: #00ccbb;
+    }
+
+    .orcid-icon {
+      color: #a6ce39;
     }
 
     .handle {
@@ -176,7 +210,7 @@
     h1 {
       margin: 0 0 14px;
       font-size: 28px;
-      line-height: 1;
+      line-height: 1.1;
     }
 
     main h2 {
@@ -280,9 +314,8 @@
       }
 
       .navigation .site-name {
-        width: 100%;
         margin-right: 0;
-        font-size: 18px;
+        font-size: 24px;
       }
 
       .layout {
@@ -321,7 +354,13 @@
   <!-- TOP NAVIGATION -->
   <header class="masthead">
     <nav class="navigation" aria-label="Main navigation">
-      <a class="site-name" href="#about">Abel Owolabi</a>
+      <a
+        class="site-name"
+        href="#about"
+        aria-label="Home"
+        title="Home"
+      >🏠</a>
+
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks</a>
@@ -343,7 +382,7 @@
       <h2 class="author-name">Abel Owolabi</h2>
 
       <p class="author-bio">
-        PhD Student, URochester ECE<br>
+        <strong>PhD Student, URochester ECE</strong><br>
         VLSI &amp; Digital IC Design<br>
         Emerging Technologies
       </p>
@@ -351,34 +390,19 @@
       <ul class="profile-links">
 
         <li>
-          <span class="icon" aria-hidden="true">⌖</span>
+          <i
+            class="fa-solid fa-location-dot icon location-icon"
+            aria-hidden="true"
+          ></i>
           Rochester, New York, USA
-        </li>
-
-        <li>
-          <a href="#publications">
-            <span class="icon" aria-hidden="true">▤</span>
-            Publications
-          </a>
-        </li>
-
-        <li>
-          <a href="Abel_Owolabi_Resume.pdf">
-            <span class="icon" aria-hidden="true">▧</span>
-            Résumé (PDF)
-          </a>
-        </li>
-
-        <li>
-          <a href="#talks">
-            <span class="icon" aria-hidden="true">◉</span>
-            Talks
-          </a>
         </li>
 
         <li class="social-start">
           <a href="mailto:aowolabi@ur.rochester.edu">
-            <span class="icon" aria-hidden="true">✉</span>
+            <i
+              class="fa-solid fa-envelope icon email-icon"
+              aria-hidden="true"
+            ></i>
             Email
             <span class="handle">aowolabi@ur.rochester.edu</span>
           </a>
@@ -386,7 +410,10 @@
 
         <li>
           <a href="https://www.linkedin.com/in/abelowolabi/">
-            <span class="icon" aria-hidden="true">in</span>
+            <i
+              class="fa-brands fa-linkedin icon linkedin-icon"
+              aria-hidden="true"
+            ></i>
             LinkedIn
             <span class="handle">abelowolabi</span>
           </a>
@@ -394,7 +421,10 @@
 
         <li>
           <a href="https://github.com/Owolabiabel">
-            <span class="icon" aria-hidden="true">GH</span>
+            <i
+              class="fa-brands fa-github icon github-icon"
+              aria-hidden="true"
+            ></i>
             GitHub
             <span class="handle">@Owolabiabel</span>
           </a>
@@ -402,15 +432,21 @@
 
         <li>
           <a href="https://x.com/Owolabiabel">
-            <span class="icon" aria-hidden="true">X</span>
-            X / Twitter
+            <i
+              class="fa-brands fa-x-twitter icon x-icon"
+              aria-hidden="true"
+            ></i>
+            X
             <span class="handle">@Owolabiabel</span>
           </a>
         </li>
 
         <li>
           <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&amp;hl=en">
-            <span class="icon" aria-hidden="true">◆</span>
+            <i
+              class="fa-brands fa-google-scholar icon scholar-icon"
+              aria-hidden="true"
+            ></i>
             Google Scholar
             <span class="handle">Abel Owolabi</span>
           </a>
@@ -418,7 +454,10 @@
 
         <li>
           <a href="https://www.researchgate.net/profile/Abel-Owolabi-2">
-            <span class="icon" aria-hidden="true">RG</span>
+            <i
+              class="fa-brands fa-researchgate icon researchgate-icon"
+              aria-hidden="true"
+            ></i>
             ResearchGate
             <span class="handle">Abel-Owolabi-2</span>
           </a>
@@ -426,7 +465,10 @@
 
         <li>
           <a href="https://orcid.org/0009-0003-4792-8789">
-            <span class="icon" aria-hidden="true">iD</span>
+            <i
+              class="fa-brands fa-orcid icon orcid-icon"
+              aria-hidden="true"
+            ></i>
             ORCID
             <span class="handle">0009-0003-4792-8789</span>
           </a>
@@ -447,17 +489,13 @@
           I am a Ph.D. student in the Department of Electrical and
           Computer Engineering at the University of Rochester,
           New York, USA, advised by
-          <a href="https://hajim.rochester.edu/ece/sites/friedman/">
-            Distinguished Professor Eby G. Friedman
-          </a>.
+          <a href="https://hajim.rochester.edu/ece/sites/friedman/">Distinguished Professor Eby G. Friedman</a>.
         </p>
 
         <p>
           My research focuses on
-          <strong>
-            VLSI and digital integrated circuit design for
-            emerging technologies
-          </strong>,
+          <strong>VLSI and digital integrated circuit design for
+          emerging technologies</strong>,
           with an emphasis on energy-efficient computing and
           AI/ML accelerator arithmetic.
         </p>
@@ -627,9 +665,7 @@
         </p>
 
         <p>
-          <a href="https://github.com/Owolabiabel/Digital-IC-VLSI-Physical-Layout">
-            View my IC design and physical layout portfolio
-          </a>.
+          <a href="https://github.com/Owolabiabel/Digital-IC-VLSI-Physical-Layout">View my IC design and physical layout portfolio</a>.
         </p>
       </section>
 
@@ -640,9 +676,7 @@
         <p>
           My research manuscripts and presentations are listed
           below. See also
-          <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&amp;hl=en">
-            Google Scholar
-          </a>.
+          <a href="https://scholar.google.com/citations?user=1dlc7BwAAAAJ&amp;hl=en">Google Scholar</a>.
         </p>
 
         <h2>Submitted Manuscripts</h2>
@@ -746,9 +780,15 @@
       <p class="follow">
         Follow:
         &nbsp;
-        <a href="https://github.com/Owolabiabel">GitHub</a>
+        <a href="https://github.com/Owolabiabel">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          GitHub
+        </a>
         &nbsp;
-        <a href="https://x.com/Owolabiabel">X / Twitter</a>
+        <a href="https://x.com/Owolabiabel">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          X
+        </a>
       </p>
 
       <p>
@@ -770,6 +810,7 @@
 
     function showPage() {
       const requestedPage = window.location.hash.slice(1);
+
       const activePage = Object.prototype.hasOwnProperty.call(
         pageNames,
         requestedPage
